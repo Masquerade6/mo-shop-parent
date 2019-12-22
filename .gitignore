@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Project exclude paths
+/mo-shop-basics/mo-shop-basics-eureka/target/
+/mo-shop-entity/target/
+/mo-shop-service-api/mo-shop-service-api-member/target/
+/mo-shop-service-api/mo-shop-service-api-wechat/target/
+/mo-shop-service-impl/mo-shop-service-member/target/
+/mo-shop-service-impl/mo-shop-service-wechat/target/
