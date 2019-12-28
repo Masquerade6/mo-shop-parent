@@ -1,5 +1,7 @@
 server:
   port: 8300
+
+# eureka相关配置
 eureka:
   client:
     service-url:
@@ -14,7 +16,19 @@ eureka:
     #    lease-renewal-interval-in-seconds: 30
     #eureka服务器在接收到实例的最后一次发出的心跳后,需要等待多久才可以将此实例删除,默认为90秒
 #    lease-expiration-duration-in-seconds: 90
+
+#此服务注册到eureka服务端的名字
 spring:
   application:
-    #此服务注册到eureka服务端的名字
     name: app-member
+
+# swagger配置
+swagger:
+  base-package: com.mobei.member.service
+  title: SpringCloud2.X-微服务电商-会员服务接口
+  description: 基于微服务的应用
+  version: 1.1
+  contact:
+    name: mobei
+    email: test@123.com
+#  terms-of-service-url: 服务条款,好像没什么用

@@ -13,7 +13,7 @@ public class MemberServiceImpl implements MemberService {
     private WechatServiceFeign feign;
 
     @Override
-    public AppEntity member2Wechat() {
+    public AppEntity memberInvokeWechat() {
         return feign.getApp();
     }
 }

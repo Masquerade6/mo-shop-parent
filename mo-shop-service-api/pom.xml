@@ -15,5 +15,29 @@
         <module>mo-shop-service-api-member</module>
     </modules>
 
+    <dependencies>
+
+<!--        &lt;!&ndash; swagger核心依赖 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.springfox</groupId>-->
+<!--            <artifactId>springfox-swagger2</artifactId>-->
+<!--            <version>2.9.2</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; swagger UI &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.springfox</groupId>-->
+<!--            <artifactId>springfox-swagger-ui</artifactId>-->
+<!--            <version>2.9.2</version>-->
+<!--        </dependency>-->
+
+        <!-- swagger:这个依赖可以帮助完成自动配置,配置信息可以直接写在yml中,不用写配置类了 -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.9.1.RELEASE</version>
+        </dependency>
+
+
+    </dependencies>
 
 </project>
