@@ -8,15 +8,22 @@
         <version>1.0-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>mo-shop-basics-eureka</artifactId>
+    <artifactId>mo-shop-basics-zuul</artifactId>
     <packaging>jar</packaging>
     <version>1.0-RELEASE</version>
 
-    <!-- eureka-server -->
     <dependencies>
+        <!-- zuul网关依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+
+        <!-- swagger:这个依赖可以帮助完成自动配置,配置信息可以直接写在yml中,不用写配置类了 -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.9.1.RELEASE</version>
         </dependency>
     </dependencies>
 

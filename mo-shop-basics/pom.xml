@@ -5,14 +5,16 @@
     <parent>
         <artifactId>mo-shop-parent</artifactId>
         <groupId>com.mobei</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <version>1.0-RELEASE</version>
     <artifactId>mo-shop-basics</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>mo-shop-basics-eureka</module>
+        <module>mo-shop-basics-zuul</module>
+        <module>mo-shop-basics-configserver</module>
     </modules>
 
 

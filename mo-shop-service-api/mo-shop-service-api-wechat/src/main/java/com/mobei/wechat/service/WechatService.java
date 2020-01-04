@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * 微信服务接口
  */
-@Api("微信服务")
+@Api(tags = "微信服务")
 public interface WechatService {
 
     /**
