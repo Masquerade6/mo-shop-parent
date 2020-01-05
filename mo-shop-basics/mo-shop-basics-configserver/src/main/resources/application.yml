@@ -1,5 +1,6 @@
 server:
   port: 8400
+
 spring:
   application:
     name: app-configserver
@@ -8,4 +9,15 @@ spring:
     config:
       server:
         git:
-          uri: http://192.168.127.51/root/config.git #配置文件在远程仓库的地址,比如我这里放在github上
+          uri: https://github.com/Liuyaowu/shop-config.git
+          username: mobei615@foxmail.com
+          password: 615'kjlyw06218
+#          uri: http://192.168.127.51/root/shop-config.git #配置文件在远程仓库的地址,这里放在gitlab
+
+#eureka基本信息配置
+eureka:
+  client:
+    #因为自己是为注册中心,不需要自己注册自己
+    register-with-eureka: false
+    #因为自己是为注册中心,不需要检索服务,不需要从服务端获取注册信息
+    fetch-registry: false

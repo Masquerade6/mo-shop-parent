@@ -11,6 +11,7 @@
     <version>1.0-RELEASE</version>
     <artifactId>mo-shop-basics</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>mo-shop-basics-eureka</module>
         <module>mo-shop-basics-zuul</module>

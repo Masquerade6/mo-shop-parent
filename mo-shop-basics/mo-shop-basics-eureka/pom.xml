@@ -12,12 +12,20 @@
     <packaging>jar</packaging>
     <version>1.0-RELEASE</version>
 
-    <!-- eureka-server -->
     <dependencies>
+
+        <!-- eureka-server依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
+
+        <!-- 客户端读取config server需要的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

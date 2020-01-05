@@ -79,40 +79,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--  注意限定版本一定为RELEASE,因为上传的对应仓库的存储类型为RELEASE  -->
-    <distributionManagement>
-        <!-- 指定仓库地址 -->
-        <repository>
-            <!-- 此名称要和settings.xml中设置的id一致 -->
-            <id>mobei</id>
-            <!--我们在私服创建的仓库地址-->
-            <url>http://192.168.127.50:8081/repository/mobei-release/</url>
-        </repository>
-    </distributionManagement>
-
-    <build>
-        <plugins>
-            <!-- 发布代码jar插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.0.0-M1</version>
-            </plugin>
-            <!--发布源码插件-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
