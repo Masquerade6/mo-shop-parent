@@ -10,11 +10,67 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>mo-shop-service-wechat</artifactId>
     <dependencies>
+
+        <!-- 引入微信接口模块 -->
         <dependency>
             <groupId>com.mobei</groupId>
             <artifactId>mo-shop-service-api-wechat</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+
+        <!--工具类-->
+        <dependency>
+            <groupId>com.mobei</groupId>
+            <artifactId>mo-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <!-- 引入weixin-java-mp -->
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-mp</artifactId>
+            <version>3.6.4.B</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xstream</artifactId>
+                    <groupId>com.thoughtworks.xstream</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- spring boot整合eureka客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>xstream</artifactId>
+                    <groupId>com.thoughtworks.xstream</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- eureka-client和weixin-java-mp引入了不同版本的该依赖,会有冲突问题,分别排除后引入指定的依赖 -->
+        <dependency>
+            <artifactId>xstream</artifactId>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <version>1.4.11</version>
+        </dependency>
+
+        <!-- 微信调用会员接口 -->
+        <dependency>
+            <groupId>com.mobei</groupId>
+            <artifactId>mo-shop-service-api-member</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <!-- 数据转换依赖 -->
+        <!--<dependency>
+            <groupId>com.mobei</groupId>
+            <artifactId>mo-shop-api-member-dto</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>-->
+
     </dependencies>
 
 

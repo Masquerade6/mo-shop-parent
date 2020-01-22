@@ -17,10 +17,29 @@ eureka:
     #eureka服务器在接收到实例的最后一次发出的心跳后,需要等待多久才可以将此实例删除,默认为90秒
 #    lease-expiration-duration-in-seconds: 90
 
-#此服务注册到eureka服务端的名字
+
 spring:
   application:
+    #此服务注册到eureka服务端的名字
     name: app-member
+
+  # redis
+  redis:
+    host: 192.168.127.53
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
+
+  # 数据库相关连接
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shop_member
 
 # swagger配置
 swagger:
@@ -32,3 +51,9 @@ swagger:
     name: mobei
     email: test@123.com
 #  terms-of-service-url: 服务条款,好像没什么用
+
+# 打印mybatis日志
+logging:
+  level:
+    # 开发环境使用DEBUG 生产环境用info或error(更多用)
+    com.mobei.member.mapper: debug

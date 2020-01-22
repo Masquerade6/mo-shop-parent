@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mo-shop-portal</artifactId>
+        <groupId>com.mobei</groupId>
+        <version>1.0-RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mo-shop-portal-web</artifactId>
+
+    <dependencies>
+        <!-- 整合freemarker -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
+        <dependency>
+            <artifactId>mo-shop-common-web-core</artifactId>
+            <groupId>com.mobei</groupId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <!-- 会员接口依赖 -->
+        <dependency>
+            <artifactId>mo-shop-service-api-member</artifactId>
+            <groupId>com.mobei</groupId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <!-- 腾讯联合登录api依赖 -->
+        <dependency>
+            <groupId>com.tengxun</groupId>
+            <artifactId>sdk4j</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <!-- 解决分布式session问题使用spring-session框架 -->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+
+        <!-- 池化组件 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

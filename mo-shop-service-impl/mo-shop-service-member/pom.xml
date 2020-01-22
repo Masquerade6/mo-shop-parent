@@ -20,6 +20,12 @@
             <artifactId>mo-shop-service-api-wechat</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
+
+        <!--<dependency>
+            <groupId>com.mobei</groupId>
+            <artifactId>mo-shop-api-member-dto</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>-->
     </dependencies>
 
 

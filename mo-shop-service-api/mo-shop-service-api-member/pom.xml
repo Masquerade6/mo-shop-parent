@@ -12,9 +12,17 @@
     <artifactId>mo-shop-service-api-member</artifactId>
 
     <dependencies>
+        <!-- 依赖通用核心模块 -->
         <dependency>
             <groupId>com.mobei</groupId>
-            <artifactId>mo-shop-entity</artifactId>
+            <artifactId>mo-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <!-- 依赖会员数据转换模块 -->
+        <dependency>
+            <groupId>com.mobei</groupId>
+            <artifactId>mo-shop-api-member-dto</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>

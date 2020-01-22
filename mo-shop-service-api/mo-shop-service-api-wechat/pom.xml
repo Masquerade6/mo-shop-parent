@@ -12,9 +12,10 @@
     <artifactId>mo-shop-service-api-wechat</artifactId>
 
     <dependencies>
+        <!-- 通用工具类 -->
         <dependency>
             <groupId>com.mobei</groupId>
-            <artifactId>mo-shop-entity</artifactId>
+            <artifactId>mo-shop-common-core</artifactId>
             <version>1.0-RELEASE</version>
         </dependency>
     </dependencies>

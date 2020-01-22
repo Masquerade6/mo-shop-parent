@@ -1,0 +1,24 @@
+server:
+  port: 80 #网关端口一般为80
+
+# 服务名称(注册到eureka的名称)
+spring:
+  application:
+    name: app-zuul
+
+# 服务注册到eureka的地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+
+# 配置网关反向代理
+zuul:
+  ignored-services: "*" #禁用所有,如果下面不配置访问路径则所有服务都无法访问,此时服务只能通过http://localhost/api-member/member2Wechat,http://localhost/app-member/member2Wechat服务是访问不到的
+  routes:
+    api-a:
+      path: /api-wechat/** # 以/api-wechat/访问转发到会员服务
+      serviceId: app-wechat # 注册到微服务中的服务名称
+    api-b:
+      path: /api-member/** # 以/api-member/访问转发到订单服务
+      serviceId: app-member

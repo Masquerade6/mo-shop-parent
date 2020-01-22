@@ -17,9 +17,30 @@
     </modules>
 
     <dependencies>
+        <!-- feign客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- 工具类依赖 -->
+        <dependency>
+            <groupId>com.mobei</groupId>
+            <artifactId>mo-shop-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+
+        <!-- mybatis依赖 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+        <!-- mysql依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 

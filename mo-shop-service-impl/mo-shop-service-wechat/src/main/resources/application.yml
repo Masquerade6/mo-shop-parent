@@ -13,7 +13,7 @@ eureka:
     #是否显示ip地址
     prefer-ip-address: true
     #eureka客户端需要多长时间发送心跳给eureka服务器,表明它仍然活着,默认为30 秒(与下面配置的单位都是秒)
-#    lease-renewal-interval-in-seconds: 30
+    #    lease-renewal-interval-in-seconds: 30
     #eureka服务器在接收到实例的最后一次发出的心跳后,需要等待多久才可以将此实例删除,默认为90秒
 #    lease-expiration-duration-in-seconds: 90
 
@@ -21,6 +21,17 @@ spring:
   application:
     #此服务注册到eureka服务端的名字
     name: app-wechat
+
+  # redis配置
+  redis:
+    host: 1
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
 
 # swagger配置
 swagger:
@@ -32,3 +43,29 @@ swagger:
     name: mobei
     email: test@123.com
 #  terms-of-service-url: 服务条款,好像没什么用
+
+# 微信公众号快速开发的相关配置信息
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
+wx:
+  mp:
+    configs: #可以设置多个
+      - appId: wx47346275c5938ce2 #（一个公众号的appid）
+        secret: d94264ad547383254cf632e864fca06c #（公众号的appsecret）
+        token: mobei #（接口配置里的Token值）
+
+# 微信公众号的自定义的配置信息
+mobei:
+  weixin:
+    registration:
+      code:
+        ###微信注册码消息
+        message:  您的注册码为:%s,这是测试代码
+    ###默认提示消息
+    default:
+      registration:
+        code:
+          message: 您的消息,我们已经收到,会及时回复给您的!

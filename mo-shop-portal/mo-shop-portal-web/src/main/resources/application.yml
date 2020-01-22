@@ -1,0 +1,29 @@
+# spring整合freemarker的配置信息
+spring:
+  freemarker:
+    cache: false # 开发环境关闭缓存,及时刷新,上线生产环境需要修改为true
+    charset: UTF-8 #字符集
+    check-template-location: true # 是否检查template路径是否存在
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl # 设定模板的后缀
+    template-loader-path: # 设定模板的加载路径,多个以逗号分隔,默认: ["classpath:/templates/"]
+      - classpath:/templates
+  application:
+    name: app-mobei-portal-web
+
+# redis配置信息
+redis:
+  hostname: 192.168.127.53
+  port: 6379
+  password: 123456
+
+# 注册到eureka的地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
+
+
