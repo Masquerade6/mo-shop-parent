@@ -54,7 +54,7 @@
         <dependency>
             <artifactId>xstream</artifactId>
             <groupId>com.thoughtworks.xstream</groupId>
-            <version>1.4.11</version>
+            <version>1.4.19</version>
         </dependency>
 
         <!-- 微信调用会员接口 -->
